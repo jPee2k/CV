@@ -11,13 +11,15 @@
 <!--  TODO favicon -->
 </head>
 <body class="page">
-  <header class="header">
-    <div class="container">
-      <a href="#" class="logo header__logo"><!-- TODO rm href -->
-        <img src="https://via.placeholder.com/300x50" alt="author's name" class="logo__img"><!-- TODO height width src -->
+  <header class="header no-js">
+    <div class="container header__container">
+      <a class="logo header__logo">
+        <svg class="logo__img" width="107" height="36">
+          <use href="./images/svg/multi-icons.svg#logo"></use>
+        </svg>
       </a>
-      <nav class="main-nav no-js">
-        <button class="main-nav__toggle" type="button" aria-label="close menu" aria-expanded="false"><span></span></button>
+      <nav class="main-nav"><!--  main-nav--shown -->
+        <button class="main-nav__toggle" type="button" aria-label="закрыть меню" aria-expanded="true"><span></span></button>
         <ul class="main-nav__list">
           <li class="main-nav__item"><a href="#about" class="main-nav__link">Обо мне</a></li>
           <li class="main-nav__item"><a href="#skills" class="main-nav__link">Навыки</a></li>
@@ -27,26 +29,39 @@
         </ul>
       </nav>
     </div>
+    <!-- TODO progress bar -->
   </header>
 
   <main class="main">
     <h1 class="visually-hidden">Мое резюме</h1>
 
-    <section class="about" id="about">
+    <section class="about main__about" id="about">
       <div class="container">
-        <h2 class="title about__title">Обо мне</h2>
-        <p class="about__name">Сергей Пилипенко</p>
-        <p class="about__position">Frontend developer</p>
-        <img class="photo about__photo" src="https://via.placeholder.com/280" alt="author's photo" ><!-- TODO height width src -->
+        <header class="about__header">
+          <h2 class="title about__title visually-hidden">Обо мне</h2>
+          <p class="about__name">Сергей Пилипенко</p>
+          <p class="about__position">Frontend developer</p>
+          <img class="photo about__photo" width="200" height="200" src="./images/photo_mini.jpg" alt="фото автора">
+        </header>
 
-        <div class="socials">
+        <div class="socials about__socials">
           <h3 class="visually-hidden">Связаться со мной</h3>
           <ul class="socials__list">
-            <li><a class="socials__link socials__link--phone" href="tel:+380983606735" aria-label="phone number"></a></li>
-            <li><a class="socials__link socials__link--email" href="mailto:jpee.dev@gmail.com" aria-label="email to author"></a></li>
-            <li><a class="socials__link socials__link--telegram" href="https://t.me/jpee_dev/" target="_blank" rel="nofollow noopener" aria-label="telegram"></a></li>
-            <li><a class="socials__link socials__link--instagram" href="https://www.instagram.com/jpee2k/" target="_blank" rel="nofollow noopener" aria-label="instagram"></a></li>
-            <li><a class="socials__link socials__link--linkedin" href="https://www.linkedin.com/in/serhii-pylypenko-a741061a9/" target="_blank" rel="nofollow noopener" aria-label="linkedin"></a></li>
+            <li><a class="socials__link socials__link--phone" href="tel:+380983606735" aria-label="номер телефона">
+              <svg height="23" width="23"><use href="./images/svg/multi-icons.svg#phone"></use></svg>
+            </a></li>
+            <li><a class="socials__link socials__link--email" href="mailto:jpee.dev@gmail.com" aria-label="электронная почта">
+              <svg height="30" width="30"><use href="./images/svg/multi-icons.svg#email"></use></svg>
+            </a></li>
+            <li><a class="socials__link socials__link--telegram" href="https://t.me/jpee_dev/" target="_blank" rel="nofollow noopener" aria-label="telegram">
+              <svg height="30" width="30"><use href="./images/svg/multi-icons.svg#telegram"></use></svg>
+            </a></li>
+            <li><a class="socials__link socials__link--instagram" href="https://www.instagram.com/jpee2k/" target="_blank" rel="nofollow noopener" aria-label="instagram">
+              <svg height="30" width="30"><use href="./images/svg/multi-icons.svg#instagram"></use></svg>
+            </a></li>
+            <li><a class="socials__link socials__link--linkedin" href="https://www.linkedin.com/in/serhii-pylypenko-a741061a9/" target="_blank" rel="nofollow noopener" aria-label="linkedin">
+              <svg height="28" width="28"><use href="./images/svg/multi-icons.svg#linkedin"></use></svg>
+            </a></li>
           </ul>
         </div>
 
@@ -69,31 +84,50 @@
             поставленная цель дают хорошие результаты.</p>
         </div>
 
-        <a href="./uploads/serhii_pylypenko_CV.pdf" class="button header__button button--download" download>Скачать резюме</a>
+        <a class="button header__button button--download" href="./uploads/serhii_pylypenko_CV.pdf" download>Скачать резюме</a>
       </div>
     </section>
 
     <div class="container">
       <section class="skills" id="skills">
-        <h2 class="title skills__title">Навыки</h2>
+        <h2 class="title main__title">Навыки</h2>
         <ul class="skills__list">
-          <li class="skills__item">Разработка адаптивных и доступных веб страниц (HTML, CSS, SASS)</li>
-          <li class="skills__item">Разработка скриптов на языке JavaScript (js, ajax, fetch)</li>
-          <li class="skills__item">Разработка серверных скриптов на языке PHP</li>
-          <li class="skills__item">Базовые знания SQL. Работа с mySQL, postgreSQL</li>
-          <li class="skills__item">Базовые навыки работы с git (GitHub, BitBucket)</li>
-          <li class="skills__item">Базовые навыки написания Unit тестов</li>
-          <li class="skills__item">Дополнительно: webpack, npm, composer, linters, bash, linux</li>
+          <li class="skills__item skills__item--css">
+            Разработка адаптивных и доступных веб страниц
+            <span>HTML, CSS, SASS</span>
+          </li>
+          <li class="skills__item skills__item--js">
+            Разработка скриптов на языке JavaScript
+            <span>js, ajax, fetch</span>
+          </li>
+          <li class="skills__item skills__item--php">
+            Разработка серверных скриптов на языке PHP
+            <span>PHP</span>
+          </li>
+          <li class="skills__item skills__item--sql">
+            Базовые знания SQL. Работа с mySQL, postgreSQL
+            <span>mySQL, postgreSQL</span>
+          </li>
+          <li class="skills__item skills__item--git">
+            Базовые навыки работы с git
+            <span>GitHub, BitBucket</span>
+          </li>
+          <li class="skills__item skills__item--test">
+            Базовые навыки написания Unit тестов
+            <span>Unit tests</span>
+          </li>
+          <li class="skills__item skills__item--npm">
+            Дополнительно: webpack, npm, composer, linters, bash, linux</li>
         </ul>
       </section>
 
       <section class="experience" id="experience">
-        <h2 class="title experience__title">Последние места работы</h2>
+        <h2 class="title main__title">Последние места работы</h2>
         <ul class="experience__list">
           <li class="experience__item job">
             <h3 class="job__title">PHP backend developer</h3>
-            <time class="job__date" datetime="2021-01-01">с 01.2021 по 05.2021 (4 месяца)</time>
-            <span class="job__name">Redlab, Чернигов (web)</span>
+            <span class="job__name">Redlab, Чернигов (web)</span><br>
+            <time class="job__date" datetime="2021-01-01">с 01.2021 по 05.2021 (4 месяца)</time><br>
             <ul class="job__responsibilities">
               <li class="job__item">Разработка серверной части веб сайтов на PHP (Wordpress, меньше Laravel)</li>
               <li class="job__item">Построение взаимодействия серверной и клиентской части при помощи Ajax, Jquery</li>
@@ -102,21 +136,21 @@
           </li>
           <li class="experience__item job">
             <h3 class="job__title">Инженер-технолог</h3>
-            <time class="job__date" datetime="2016-01-01">с 01.2016 по 04.2020 (4 года 3 месяца)</time>
-            <span class="job__name">СК "Вималспецбуд", Чернигов (строительная компания)</span>
+            <span class="job__name">СК "Вималспецбуд", Чернигов (строительная компания)</span><br>
+            <time class="job__date" datetime="2016-01-01">с 01.2016 по 04.2020 (4 года 3 месяца)</time><br>
             <ul class="job__responsibilities">
-              <li class="job__item">Разработка технологического процесса изготовления оборудования</li>
-              <li class="job__item">Расчет норм времени на изготовление оборудования</li>
-              <li class="job__item">Расчет нормативов материальных затрат</li>
-              <li class="job__item">Разработка специальной оснастки</li>
-              <li class="job__item">Составление программ для станков с ЧПУ</li>
+              <li class="job__item job__item--factory">Разработка технологического процесса изготовления оборудования</li>
+              <li class="job__item job__item--factory">Расчет норм времени на изготовление оборудования</li>
+              <li class="job__item job__item--factory">Расчет нормативов материальных затрат</li>
+              <li class="job__item job__item--factory">Разработка специальной оснастки</li>
+              <li class="job__item job__item--factory">Составление программ для станков с ЧПУ</li>
             </ul>
           </li>
         </ul>
       </section>
 
       <section class="education" id="education">
-        <h2 class="title education__title">Образование</h2>
+        <h2 class="title main__title">Образование</h2>
         <ul class="experience__list">
           <li class="experience__item job">
             <h3 class="job__title">Черниговский национальный технологический университет</h3>
@@ -141,83 +175,79 @@
       </section>
 
       <section class="works" id="works">
-        <h2 class="title works__title">Мои работы</h2>
+        <h2 class="title main__title">Мои работы</h2>
         <ul class="works__list">
           <li class="works__item card">
-            <h4 class="card__title"></h4>
+            <header class="card__header">
+              <h4 class="card__title">Redlab менеджмент</h4>
+            </header>
+            <img src="./images/works/redlab.jpg" class="card__img" alt="Скриншот сайта - Redlab менеджмент">
+            <footer class="card__footer">
+              <a class="card__link card__link--git" href="https://github.com/jPee2k/redlab-laravel-test" target="_blank" rel="nofollow noreferrer" aria-label="Проект на GitHub"></a>
+              <a class="card__link button" href="http://redlab-test.herokuapp.com/" target="_blank" rel="nofollow noreferrer"></a>
+              <ul class="card__tech">
+                <li class="card__item">html</li>
+                <li class="card__item">css</li>
+                <li class="card__item">php</li>
+              </ul>
+            </footer>
+          </li>
+          <li class="works__item card">
+            <h4 class="card__title">RSS агрегатор</h4>
             <img class="card__img" alt="">
-            <a class="card__link button" href="#" target="_blank" rel="nofollow noreferrer">Взглянуть</a>
+            <a class="card__link button" href="#" target="_blank" rel="nofollow noreferrer">Перейти</a>
             <ul class="card__tech">
               <li class="card__item">html</li>
               <li class="card__item">css</li>
               <li class="card__item">js</li>
-              <li class="card__item">php</li>
             </ul>
           </li>
           <li class="works__item card">
-            <h4 class="card__title"></h4>
+            <h4 class="card__title">Nerds - дизайн студия</h4>
             <img class="card__img" alt="">
-            <a class="card__link button" href="#" target="_blank" rel="nofollow noreferrer">Взглянуть</a>
+            <a class="card__link button" href="#" target="_blank" rel="nofollow noreferrer">Перейти</a>
             <ul class="card__tech">
               <li class="card__item">html</li>
               <li class="card__item">css</li>
               <li class="card__item">js</li>
-              <li class="card__item">php</li>
             </ul>
           </li>
           <li class="works__item card">
-            <h4 class="card__title"></h4>
+            <h4 class="card__title">Пятнашки</h4>
             <img class="card__img" alt="">
-            <a class="card__link button" href="#" target="_blank" rel="nofollow noreferrer">Взглянуть</a>
+            <a class="card__link button" href="#" target="_blank" rel="nofollow noreferrer">Перейти</a>
             <ul class="card__tech">
               <li class="card__item">html</li>
               <li class="card__item">css</li>
               <li class="card__item">js</li>
-              <li class="card__item">php</li>
             </ul>
           </li>
           <li class="works__item card">
-            <h4 class="card__title"></h4>
+            <h4 class="card__title">Lucky-day</h4>
             <img class="card__img" alt="">
-            <a class="card__link button" href="#" target="_blank" rel="nofollow noreferrer">Взглянуть</a>
+            <a class="card__link button" href="#" target="_blank" rel="nofollow noreferrer">Перейти</a>
             <ul class="card__tech">
               <li class="card__item">html</li>
               <li class="card__item">css</li>
               <li class="card__item">js</li>
-              <li class="card__item">php</li>
             </ul>
           </li>
           <li class="works__item card">
-            <h4 class="card__title"></h4>
+            <h4 class="card__title">Gen diff - консольная утилита</h4>
             <img class="card__img" alt="">
-            <a class="card__link button" href="#" target="_blank" rel="nofollow noreferrer">Взглянуть</a>
+            <a class="card__link button" href="#" target="_blank" rel="nofollow noreferrer">Перейти</a>
             <ul class="card__tech">
-              <li class="card__item">html</li>
-              <li class="card__item">css</li>
-              <li class="card__item">js</li>
-              <li class="card__item">php</li>
+              <li class="card__item">node.js</li>
             </ul>
           </li>
           <li class="works__item card">
-            <h4 class="card__title"></h4>
+            <h4 class="card__title">Yooosi</h4>
             <img class="card__img" alt="">
-            <a class="card__link button" href="#" target="_blank" rel="nofollow noreferrer">Взглянуть</a>
+            <a class="card__link button" href="#" target="_blank" rel="nofollow noreferrer">Перейти</a>
             <ul class="card__tech">
               <li class="card__item">html</li>
               <li class="card__item">css</li>
               <li class="card__item">js</li>
-              <li class="card__item">php</li>
-            </ul>
-          </li>
-          <li class="works__item card">
-            <h4 class="card__title"></h4>
-            <img class="card__img" alt="">
-            <a class="card__link button" href="#" target="_blank" rel="nofollow noreferrer">Взглянуть</a>
-            <ul class="card__tech">
-              <li class="card__item">html</li>
-              <li class="card__item">css</li>
-              <li class="card__item">js</li>
-              <li class="card__item">php</li>
             </ul>
           </li>
         </ul>
