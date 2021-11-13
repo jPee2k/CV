@@ -2,7 +2,7 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 // const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
-// const CopyPlugin = require('copy-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 const pages = ['index.html'];
 const multipleHtmlPlugins = pages
@@ -82,10 +82,10 @@ module.exports = {
     //     developerName: 'jPee',
     //   },
     // }),
-    // new CopyPlugin({
-    //   patterns: [
-    //     { from: 'src/media/sounds', to: 'media/sounds' },
-    //   ],
-    // }),
+    new CopyPlugin({
+      patterns: [
+        { from: 'src/uploads/', to: 'uploads/' },
+      ],
+    }),
   ],
 };
