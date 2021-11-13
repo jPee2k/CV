@@ -10,6 +10,8 @@ downloads/
 *.zip
 *.rar
 
+!src/uploads/*.pdf
+
 node_modules/
 npm-debug.*
 
