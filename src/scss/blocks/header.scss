@@ -1,0 +1,17 @@
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 5;
+
+  width: 100%;
+  min-height: 73px;
+  background-color: $main-color;
+
+  &.no-js {
+    position: static;
+  }
+}
+
+.header__container {
+  position: relative;
+}

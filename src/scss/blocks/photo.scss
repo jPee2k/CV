@@ -1,0 +1,8 @@
+.photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid $white-text-color;
+
+  filter: saturate(1.4) brightness(1.2);
+}

@@ -1,0 +1,17 @@
+.logo {
+  display: inline-block;
+
+  @include scale-hover;
+}
+
+.logo__img {
+  color: $white-text-color;
+  width: auto;
+  height: 50px;
+
+  filter: drop-shadow(2px 2px 0 $text-color);
+}
+
+.logo__img {
+  margin: 10px;
+}

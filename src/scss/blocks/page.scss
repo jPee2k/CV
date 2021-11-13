@@ -1,0 +1,12 @@
+.page {
+  position: relative;
+
+  min-width: 320px;
+  overflow-x: hidden;
+
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+  color: $text-color;
+  background-color: rgba(227, 227, 227, 0.5);
+}

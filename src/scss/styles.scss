@@ -27,3 +27,15 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+a {
+  font-weight: 500;
+
+  &:link {
+    color: $link-color;
+  }
+
+  &:visited {
+    color: $link-visited;
+  }
+}

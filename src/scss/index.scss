@@ -1,6 +1,25 @@
 @import "utils/fonts";
 @import "utils/variables";
 @import "utils/mixins";
+@import "utils/animations";
 
 @import "normalize";
 @import "styles";
+
+@import "blocks/page";
+@import "blocks/container";
+@import "blocks/header";
+@import "blocks/main";
+@import "blocks/about";
+@import "blocks/socials";
+@import "blocks/skills";
+@import "blocks/experience";
+@import "blocks/education";
+@import "blocks/works";
+@import "blocks/button";
+@import "blocks/card";
+@import "blocks/job";
+@import "blocks/logo";
+@import "blocks/main-nav";
+@import "blocks/photo";
+@import "blocks/title";

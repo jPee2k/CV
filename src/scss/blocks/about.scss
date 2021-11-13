@@ -1,0 +1,49 @@
+.about {
+  .container {
+    text-align: center;
+  }
+}
+
+.about__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  min-height: 40vh;
+}
+
+.about__name {
+  font-size: 28px;
+  font-weight: 700;
+
+  margin-top: 90px;
+  margin-bottom: 5px;
+}
+
+.about__position {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+
+  margin-top: 5px;
+  margin-bottom: 60px;
+}
+
+.about__photo {
+  margin-top: auto;
+  margin-bottom: 24px;
+}
+
+.about__description {
+  text-indent: 20px;
+  line-height: 1.2;
+  text-align: left;
+
+  margin-bottom: 50px;
+}
+
+.about__socials {
+  margin-bottom: 50px;
+}
