@@ -3,6 +3,7 @@ import 'regenerator-runtime/runtime.js';
 import '../scss/index.scss';
 
 import { closeMenu } from './menu.js';
+import runProgressBarApp from './progress.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const elements = document.querySelectorAll('.no-js');
@@ -15,3 +16,5 @@ document.addEventListener('DOMContentLoaded', () => {
     closeMenu(button);
   });
 });
+
+runProgressBarApp();
