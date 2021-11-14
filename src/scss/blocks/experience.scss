@@ -1,3 +1,7 @@
 .experience__list {
   @include reset-list;
 }
+
+.experience__item {
+  margin-bottom: 40px;
+}
