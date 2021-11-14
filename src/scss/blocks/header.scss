@@ -1,7 +1,7 @@
 .header {
   position: fixed;
   top: 0;
-  z-index: 5;
+  z-index: $z-menu;
 
   width: 100%;
   min-height: 73px;

@@ -9,4 +9,20 @@
   line-height: 1;
   color: $text-color;
   background-color: rgba(227, 227, 227, 0.5);
+
+  margin-bottom: 100px;
+}
+
+.page--lock {
+  &::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: $z-lock;
+
+    background-color: rgba(2, 2, 83, 0.3);
+  }
 }
