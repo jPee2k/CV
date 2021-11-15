@@ -2,7 +2,8 @@
   @include reset-list;
 
   display: grid;
-  grid-template-columns: repeat(auto-fill, 280px);
+  grid-template-columns: repeat(auto-fit, 280px);
+  grid-auto-flow: dense;
   justify-content: space-evenly;
   gap: 40px;
 }
