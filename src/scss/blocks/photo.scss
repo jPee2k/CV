@@ -5,4 +5,18 @@
   border: 5px solid $white-text-color;
 
   filter: saturate(1.4) brightness(1.2);
+
+  @media (min-width: $tablet) {
+    width: 280px;
+    height: 280px;
+  }
+
+  @media (min-width: $desktop-sm) {
+    width: 340px;
+    height: 340px;
+  }
 }
+
+
+
+

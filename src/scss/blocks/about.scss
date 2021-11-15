@@ -1,9 +1,3 @@
-.about {
-  .container {
-    text-align: center;
-  }
-}
-
 .about__header {
   display: flex;
   flex-direction: column;
@@ -46,4 +40,34 @@
 
 .about__socials {
   margin-bottom: 50px;
+}
+
+.about--advance {
+  p {
+    text-indent: 20px;
+  }
+}
+
+@media (min-width: $tablet) {
+  .about__name {
+    font-size: 36px;
+  }
+
+  .about__position {
+    font-size: 24px;
+  }
+
+  .about__description {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: $desktop-sm) {
+  .about__name {
+    font-size: 42px;
+  }
+
+  .about__position {
+    font-size: 28px;
+  }
 }

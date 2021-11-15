@@ -7,5 +7,27 @@
 }
 
 .main__title {
-  padding-top: 90px;
+  //padding-top: 90px;
+}
+
+@media (min-width: $tablet-sm) {
+  .main__section {
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 4px 4px 12px 0 lightslategray;
+
+    margin-bottom: 50px;
+  }
+}
+
+@media (min-width: $tablet) {
+  .main__section {
+    padding: 40px;
+  }
+}
+
+@media (min-width: $desktop-sm) {
+  .main__section {
+    padding: 60px;
+  }
 }

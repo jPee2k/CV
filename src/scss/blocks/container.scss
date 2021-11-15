@@ -1,6 +1,17 @@
 .container {
   max-width: 1200px;
-  //max-width: 320px;
   padding: 0 20px;
   margin: 0 auto;
+}
+
+@media (min-width: $tablet) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
+@media (min-width: $desktop-sm) {
+  .container {
+    padding: 0 60px;
+  }
 }
