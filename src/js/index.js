@@ -4,6 +4,7 @@ import '../scss/index.scss';
 
 import { closeMenu } from './menu.js';
 import runProgressBarApp from './progress.js';
+import runScrollApp from './scroll.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const elements = document.querySelectorAll('.no-js');
@@ -18,3 +19,4 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 runProgressBarApp();
+runScrollApp();
