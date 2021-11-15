@@ -175,12 +175,14 @@
       <section class="works main__section" id="works">
         <h2 class="title main__title">Мои работы</h2>
         <ul class="works__list">
-          <!-- TODO picture sources -->
           <li class="works__item card" tabindex="0">
             <header class="card__header">
               <h4 class="card__title">Redlab менеджмент</h4>
             </header>
-            <img src="images/works/redlab.jpg" class="card__img" alt="Скриншот сайта - Redlab менеджмент">
+            <img class="card__img" alt="Скриншот сайта - Redlab менеджмент"
+                 srcset="images/works/redlab@2x.jpg 2x, images/works/redlab@3x.jpg 3x"
+                 src="images/works/redlab.jpg"
+            >
             <footer class="card__footer">
               <a class="card__link" href="https://github.com/jPee2k/redlab-laravel-test" target="_blank" rel="nofollow noreferrer">Исходники</a>
               <a class="card__link" href="http://redlab-test.herokuapp.com/" target="_blank" rel="nofollow noreferrer">Просмотр</a>
@@ -193,11 +195,14 @@
               </ul>
             </footer>
           </li>
-          <!--<li class="works__item card" tabindex="0">
+          <li class="works__item card" tabindex="0">
             <header class="card__header">
               <h4 class="card__title">RSS агрегатор</h4>
             </header>
-            <img src="images/works/rss.jpg" class="card__img" alt="Скриншот агрегатора RSS лент">
+            <img class="card__img" alt="Скриншот агрегатора RSS лент"
+                 srcset="images/works/rss@2x.jpg 2x, images/works/rss@3x.jpg 3x"
+                 src="images/works/rss.jpg"
+            >
             <footer class="card__footer">
               <a class="card__link" href="https://github.com/jPee2k/frontend-project-lvl3" target="_blank" rel="nofollow noreferrer">Исходники</a>
               <a class="card__link" href="https://frontend-project-lvl3-jpee2k.vercel.app/" target="_blank" rel="nofollow noreferrer">Просмотр</a>
@@ -208,14 +213,35 @@
                 <li class="card__item">bootstrap</li>
               </ul>
             </footer>
-          </li>-->
+          </li>
           <li class="works__item card" tabindex="0">
             <header class="card__header">
               <h4 class="card__title">Nerds - дизайн студия</h4>
             </header>
-            <img src="images/works/nerds.jpg" class="card__img" alt="Скриншот сайта">
+            <img class="card__img" alt="Скриншот сайта Nerds"
+                 srcset="images/works/nerds@2x.jpg 2x, images/works/nerds@3x.jpg 3x"
+                 src="images/works/nerds.jpg"
+            >
             <footer class="card__footer">
               <a class="card__link" href="https://github.com/jPee2k/nerds" target="_blank" rel="nofollow noreferrer">Исходники</a>
+              <a class="card__link" href="https://nerds-mu.vercel.app/" target="_blank" rel="nofollow noreferrer">Просмотр</a>
+              <ul class="card__tech">
+                <li class="card__item">html</li>
+                <li class="card__item">css</li>
+                <li class="card__item">js</li>
+              </ul>
+            </footer>
+          </li>
+          <li class="works__item card" tabindex="0">
+            <header class="card__header">
+              <h4 class="card__title">Yooosi</h4>
+            </header>
+            <img class="card__img" alt="Скриншот сайта Yooosi"
+                 srcset="images/works/yoosi@2x.jpg 2x, images/works/yoosi@3x.jpg 3x"
+                 src="images/works/yoosi.jpg"
+            >
+            <footer class="card__footer">
+              <a class="card__link" href="https://github.com/jPee2k/test-task-for-sbitsoft" target="_blank" rel="nofollow noreferrer">Исходники</a>
 <!--              <a class="card__link" href="#" target="_blank" rel="nofollow noreferrer">Просмотр</a>-->
               <ul class="card__tech">
                 <li class="card__item">html</li>
@@ -228,7 +254,10 @@
             <header class="card__header">
               <h4 class="card__title">Пятнашки</h4>
             </header>
-            <img src="images/works/15puzzle.jpg" class="card__img" alt="Скриншот мини игры - Пятнашки">
+            <img class="card__img" alt="Скриншот мини игры - Пятнашки"
+                 srcset="images/works/15puzzle@2x.jpg 2x, images/works/15puzzle@3x.jpg 3x"
+                 src="images/works/15puzzle.jpg"
+            >
             <footer class="card__footer">
               <a class="card__link" href="https://github.com/jPee2k/gem-puzzle" target="_blank" rel="nofollow noreferrer">Исходники</a>
               <a class="card__link" href="https://gem-puzzle-git-main-jpee2k.vercel.app/" target="_blank" rel="nofollow noreferrer">Просмотр</a>
@@ -243,7 +272,10 @@
             <header class="card__header">
               <h4 class="card__title">Lucky-day</h4>
             </header>
-            <img src="images/works/lucky-day.jpg" class="card__img" alt="Скриншот мини рулетки на удачу">
+            <img class="card__img" alt="Скриншот мини приложения, рулетка на удачу"
+                 srcset="images/works/lucky-day@2x.jpg 2x, images/works/lucky-day@3x.jpg 3x"
+                 src="images/works/lucky-day.jpg"
+            >
             <footer class="card__footer">
               <a class="card__link" href="https://github.com/jPee2k/lucky-day" target="_blank" rel="nofollow noreferrer">Исходники</a>
               <a class="card__link" href="https://lucky-day.vercel.app/" target="_blank" rel="nofollow noreferrer">Просмотр</a>
@@ -254,27 +286,22 @@
               </ul>
             </footer>
           </li>
-
-          <!-- TODO
-          <li class="works__item card">
-            <h4 class="card__title">Gen diff - консольная утилита</h4>
-            <img class="card__img" alt="">
-            <a class="card__link button" href="#" target="_blank" rel="nofollow noreferrer">Перейти</a>
-            <ul class="card__tech">
-              <li class="card__item">node.js</li>
-            </ul>
+          <li class="works__item card works__item--double" tabindex="0">
+            <header class="card__header">
+              <h4 class="card__title">Gen diff - консольная утилита</h4>
+            </header>
+            <img class="card__img" alt="Скриншот результата работы приложения"
+                 srcset="images/works/nerds@2x.jpg 2x, images/works/nerds@3x.jpg 3x"
+                 src="images/works/nerds.jpg"
+            >
+            <footer class="card__footer">
+              <a class="card__link" href="https://github.com/jPee2k/frontend-project-lvl2" target="_blank" rel="nofollow noreferrer">Исходники</a>
+<!--              <a class="card__link" href="#" target="_blank" rel="nofollow noreferrer">Просмотр</a>-->
+              <ul class="card__tech">
+                <li class="card__item">node.js</li>
+              </ul>
+            </footer>
           </li>
-          <li class="works__item card">
-            <h4 class="card__title">Yooosi</h4>
-            <img class="card__img" alt="">
-            <a class="card__link button" href="#" target="_blank" rel="nofollow noreferrer">Перейти</a>
-            <ul class="card__tech">
-              <li class="card__item">html</li>
-              <li class="card__item">css</li>
-              <li class="card__item">js</li>
-            </ul>
-          </li>
-          -->
         </ul>
       </section>
 

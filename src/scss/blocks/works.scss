@@ -3,6 +3,14 @@
 
   display: grid;
   grid-template-columns: repeat(auto-fill, 280px);
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 40px;
+}
+
+.works__item {
+  max-height: 400px;
+}
+
+.works__item--double {
+  grid-column: 1 / -1;
 }
