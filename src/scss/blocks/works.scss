@@ -2,7 +2,7 @@
   @include reset-list;
 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 320px));
+  grid-template-columns: repeat(auto-fill, 280px);
   justify-content: center;
   gap: 40px;
 }
