@@ -39,3 +39,23 @@ a {
     color: $link-visited;
   }
 }
+
+/* --- visibility ---*/
+[data-animation-state] {
+  transition: transform, opacity 500ms, 700ms ease-in-out;
+}
+
+[data-animation-state="hidden"] {
+  opacity: 0;
+  transform: translateY(150px);
+}
+
+[data-animation-state="shown"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.no-js[data-animation-state="hidden"] {
+  opacity: 1;
+  transform: translateY(0);
+}
