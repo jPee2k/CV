@@ -8,7 +8,7 @@ export default () => {
       // or
       const yOffset = -50;
       const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
-      window.scrollTo({top: y, behavior: 'smooth'});
+      window.scrollTo({ top: y, behavior: 'smooth' });
     });
   });
 
@@ -19,7 +19,7 @@ export default () => {
   }
 
   const getCurrentYOffset = (el) => {
-    const {top} = el.getBoundingClientRect();
+    const { top } = el.getBoundingClientRect();
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     return top + scrollTop;
   };
@@ -36,7 +36,7 @@ export default () => {
         startPoint = windowHeight - windowHeight / constOffset;
       }
 
-      if ((window.pageYOffset > elTopOffset - startPoint) && window.pageYOffset < (elTopOffset + elHeight)) {
+      if ((window.pageYOffset > elTopOffset - startPoint) && window.pageYOffset < (elTopOffset + elHeight)) { // eslint-disable-line
         el.dataset.animationState = 'shown';
       }
     });
