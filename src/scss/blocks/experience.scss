@@ -5,3 +5,14 @@
 .experience__item {
   margin-bottom: 40px;
 }
+
+.experience__list--additional {
+  .job__date {
+    margin-bottom: 0;
+  }
+
+  .education__description {
+    margin-top: 0;
+    text-indent: 0;
+  }
+}
