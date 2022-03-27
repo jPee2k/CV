@@ -6,11 +6,11 @@
     content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Serhii Pylypenko</title>
-  <meta name="keywords" content="Serhii Pylypenko, frontend, developer, cv, resume, dev, job">
-  <meta name="description" content="Максимально наглядное и легко читаемое резюме frontend программиста.">
+  <meta name="keywords" content="Serhii Pylypenko, frontend, developer, cv, resume, dev, job, work, js, react, html, css">
+  <meta name="description" data-i18n-attr="meta.description.content" content="Максимально наглядное и легко читаемое резюме frontend программиста.">
 
   <meta property="og:title" content="Serhii Pylypenko - CV">
-  <meta property="og:description" content="Максимально наглядное и легко читаемое резюме frontend программиста.">
+  <meta property="og:description" data-i18n-attr="meta.description.content" content="Максимально наглядное и легко читаемое резюме frontend программиста.">
   <meta property="og:image" content="images/photo_mini.jpg">
 </head>
 <body class="page">
@@ -22,34 +22,52 @@
       </svg>
     </a>
     <nav class="main-nav"><!--  main-nav--shown -->
-      <button class="main-nav__toggle" type="button" aria-label="закрыть меню" aria-expanded="true"><span></span>
-      </button>
-      <ul class="main-nav__list">
-        <li class="main-nav__item"><a href="#about" class="main-nav__link">Обо мне</a></li>
-        <li class="main-nav__item"><a href="#skills" class="main-nav__link">Навыки</a></li>
-        <li class="main-nav__item"><a href="#experience" class="main-nav__link">Опыт работы</a></li>
-        <li class="main-nav__item"><a href="#education" class="main-nav__link">Образование</a></li>
-        <li class="main-nav__item"><a href="#works" class="main-nav__link">Мои работы</a></li>
-      </ul>
+      <button class="main-nav__toggle" type="button" aria-label="закрыть меню" aria-expanded="true"><span></span></button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a href="#about" class="main-nav__link" data-i18n="nav.about">Обо мне</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#skills" class="main-nav__link" data-i18n="nav.skills">Навыки</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#experience" class="main-nav__link" data-i18n="nav.experience">Опыт работы</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#education" class="main-nav__link" data-i18n="nav.education">Образование</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#works" class="main-nav__link" data-i18n="nav.works">Мои работы</a>
+          </li>
+        </ul>
+        <form class="form">
+          <select class="form__select-lang" name="lang" data-lng>
+            <option value="ru" selected>Русский</option>
+            <option value="ua">Українська</option>
+            <option value="en">English</option>
+          </select>
+        </form>
+      </div>
     </nav>
   </div>
   <progress class="progress header__progress no-js" max="100" value="0"></progress>
 </header>
 
 <main class="main">
-  <h1 class="visually-hidden">Мое резюме</h1>
+  <h1 class="visually-hidden" data-i18n="main.title">Мое резюме</h1>
 
   <section class="about main__about" id="about">
     <div class="container">
       <header class="about__header">
-        <h2 class="title about__title visually-hidden">Обо мне</h2>
-        <p class="about__name">Сергей Пилипенко</p>
-        <p class="about__position">Frontend developer</p>
+        <h2 class="title about__title visually-hidden" data-i18n="about.title">Обо мне</h2>
+        <p class="about__name" data-i18n="about.name">Сергей Пилипенко</p>
+        <p class="about__position" data-i18n="about.position">Frontend developer</p>
         <div class="photo__wrapper">
           <picture>
             <source type="image/webp"
               srcset="images/photo_mini.webp 1x, images/photo_mini@2x.webp 2x, images/photo_mini@3x.webp 3x">
-            <img class="photo about__photo" alt="фото автора"
+            <img class="photo about__photo" alt="фото автора" data-i18n-attr="about.avatar.alt"
               srcset="images/photo_mini@2x.jpg 2x, images/photo_mini@3x.jpg 3x"
               src="images/photo_mini.jpg">
           </picture>
@@ -57,40 +75,34 @@
       </header>
 
       <div class="socials about__socials">
-        <h3 class="visually-hidden">Связаться со мной</h3>
+        <h3 class="visually-hidden" data-i18n="about.contacts.title">Связаться со мной</h3>
         <ul class="socials__list">
-          <li><a class="socials__link socials__link--phone" href="tel:+380983606735" aria-label="номер телефона">
+          <li><a class="socials__link socials__link--phone" href="tel:+380983606735" aria-label="номер телефона" data-i18n-attr="about.contacts.phone.aria-label">
             <svg height="23" width="23">
               <use href="images/svg/multi-icons.svg#phone"></use>
             </svg>
           </a></li>
-          <li><a class="socials__link socials__link--email" href="mailto:jpee.dev@gmail.com"
-            aria-label="электронная почта">
+          <li><a class="socials__link socials__link--email" href="mailto:jpee.dev@gmail.com" aria-label="электронная почта" data-i18n-attr="about.contacts.email.aria-label">
             <svg height="30" width="30">
               <use href="images/svg/multi-icons.svg#email"></use>
             </svg>
           </a></li>
-          <li><a class="socials__link socials__link--git" href="https://github.com/jPee2k/" target="_blank"
-            rel="nofollow noopener" aria-label="gitHub">
+          <li><a class="socials__link socials__link--git" href="https://github.com/jPee2k/" target="_blank" rel="nofollow noopener" aria-label="gitHub">
             <svg height="28" width="28">
               <use href="images/svg/multi-icons.svg#git"></use>
             </svg>
           </a></li>
-          <li><a class="socials__link socials__link--instagram" href="https://www.instagram.com/jpee2k/" target="_blank"
-            rel="nofollow noopener" aria-label="instagram">
+          <li><a class="socials__link socials__link--instagram" href="https://www.instagram.com/jpee2k/" target="_blank" rel="nofollow noopener" aria-label="instagram">
             <svg height="30" width="30">
               <use href="images/svg/multi-icons.svg#instagram"></use>
             </svg>
           </a></li>
-          <li><a class="socials__link socials__link--telegram" href="https://t.me/jpee_dev/" target="_blank"
-            rel="nofollow noopener" aria-label="telegram">
+          <li><a class="socials__link socials__link--telegram" href="https://t.me/jpee_dev/" target="_blank" rel="nofollow noopener" aria-label="telegram">
             <svg height="30" width="30">
               <use href="images/svg/multi-icons.svg#telegram"></use>
             </svg>
           </a></li>
-          <li><a class="socials__link socials__link--linkedin"
-            href="https://www.linkedin.com/in/serhii-pylypenko-a741061a9/" target="_blank" rel="nofollow noopener"
-            aria-label="linkedin">
+          <li><a class="socials__link socials__link--linkedin" href="https://www.linkedin.com/in/serhii-pylypenko-a741061a9/" aria-label="linkedin" rel="nofollow noopener" target="_blank">
             <svg height="28" width="28">
               <use href="images/svg/multi-icons.svg#linkedin"></use>
             </svg>
@@ -99,102 +111,123 @@
       </div>
 
       <div class="about__description">
-        <p>Начинающий frontend developer с небольшим коммерческим опытом в backend разработке. Стремлюсь к чистому,
+        <p data-i18n="about.description">Начинающий frontend developer с небольшим коммерческим опытом в backend разработке. Стремлюсь к чистому,
           качественному, современному и максимально детерминированному коду. Качество ставлю превыше скорости.
-          В меру адекватен =Р</p>
+          В меру адекватен =Р
+        </p>
       </div>
 
       <p class="header__button">
-        <a class="button button--download" href="uploads/Serhii_Pylypenko_CV.pdf" download>Скачать резюме</a>
+        <a class="button button--download" href="uploads/Serhii_Pylypenko_CV.pdf" download data-i18n="main.buttons.download">
+          Скачать резюме
+        </a>
       </p>
     </div>
   </section>
 
   <div class="container">
     <section class="skills main__section no-js" id="skills" data-animation-state="hidden">
-      <h2 class="title main__title">Навыки</h2>
+      <h2 class="title main__title" data-i18n="skills.title">Навыки</h2>
       <ul class="skills__list">
-        <li class="skills__item skills__item--css">
+        <li class="skills__item skills__item--css" data-i18n="skills.html">
           Разработка адаптивных и доступных веб страниц
           <span>HTML, CSS, sass</span>
         </li>
-        <li class="skills__item skills__item--js">
+        <li class="skills__item skills__item--js" data-i18n="skills.js">
           Разработка скриптов на языке JavaScript
           <span>JS, ajax, fetch</span>
         </li>
-        <li class="skills__item skills__item--react">
+        <li class="skills__item skills__item--react" data-i18n="skills.react">
           Разработка React компонентов
           <span>React, Redux</span>
         </li>
-        <li class="skills__item skills__item--php">
+        <li class="skills__item skills__item--php" data-i18n="skills.php">
           Разработка серверных скриптов на языке PHP
           <span>PHP</span>
         </li>
-        <li class="skills__item skills__item--sql">
+        <li class="skills__item skills__item--sql" data-i18n="skills.sql">
           Базовые знания SQL. Работа с mySQL, postgreSQL
           <span>MySQL, PostgreSQL</span>
         </li>
-        <li class="skills__item skills__item--git">
+        <li class="skills__item skills__item--git" data-i18n="skills.git">
           Базовые навыки работы с git
           <span>GitHub, BitBucket</span>
         </li>
-        <li class="skills__item skills__item--test">
+        <li class="skills__item skills__item--test" data-i18n="skills.test">
           Базовые навыки написания Unit тестов
           <span>Unit Tests</span>
         </li>
-        <li class="skills__item skills__item--npm">
+        <li class="skills__item skills__item--npm" data-i18n="skills.npm">
           Дополнительно: webpack, npm, composer, linters, bash, linux
         </li>
       </ul>
     </section>
 
     <section class="experience main__section no-js" id="experience" data-animation-state="hidden">
-      <h2 class="title main__title">Последние места работы</h2>
+      <h2 class="title main__title" data-i18n="experience.title">Последние места работы</h2>
       <ul class="experience__list">
         <li class="experience__item job">
-          <h3 class="job__title">PHP backend developer</h3>
-          <span class="job__name">Redlab, Чернигов (web)</span><br>
-          <time class="job__date" datetime="2021-01-01">с 01.2021 по 05.2021 (4 месяца)</time>
+          <h3 class="job__title" data-i18n="experience.php.title">PHP backend developer</h3>
+          <span class="job__name" data-i18n="experience.php.company">Redlab, Чернигов (web)</span><br>
+          <time class="job__date" datetime="2021-01-01" data-i18n="experience.php.datetime">
+            с 01.2021 по 05.2021 (4 месяца)
+          </time>
           <br>
           <ul class="job__responsibilities">
-            <li class="job__item">Разработка серверной части веб сайтов на PHP (Wordpress, меньше Laravel)</li>
-            <li class="job__item">Построение взаимодействия серверной и клиентской части при помощи Ajax, Jquery</li>
-            <li class="job__item">Работа с HTML, CSS, MySQL...</li>
+            <li class="job__item" data-i18n="experience.php.res.0">Разработка серверной части веб сайтов на PHP (Wordpress, меньше Laravel)</li>
+            <li class="job__item" data-i18n="experience.php.res.1">Построение взаимодействия серверной и клиентской части при помощи Ajax, Jquery</li>
+            <li class="job__item" data-i18n="experience.php.res.2">Работа с HTML, CSS, MySQL...</li>
           </ul>
         </li>
         <li class="experience__item job">
-          <h3 class="job__title">Инженер-технолог</h3>
-          <span class="job__name">СК "Вималспецбуд", Чернигов (строительная компания)</span><br>
-          <time class="job__date" datetime="2016-01-01">с 01.2016 по 04.2020 (4 года 3 месяца)</time>
+          <h3 class="job__title" data-i18n="experience.factory.title">Инженер-технолог</h3>
+          <span class="job__name" data-i18n="experience.factory.company">СК "Вималспецбуд", Чернигов (строительная компания)</span><br>
+          <time class="job__date" datetime="2016-01-01" data-i18n="experience.factory.datetime">
+            с 01.2016 по 04.2020 (4 года 3 месяца)
+          </time>
           <br>
           <ul class="job__responsibilities">
-            <li class="job__item job__item--factory">Разработка технологического процесса изготовления оборудования</li>
-            <li class="job__item job__item--factory">Расчет норм времени на изготовление оборудования</li>
-            <li class="job__item job__item--factory">Расчет нормативов материальных затрат</li>
-            <li class="job__item job__item--factory">Разработка специальной оснастки</li>
-            <li class="job__item job__item--factory">Составление программ для станков с ЧПУ</li>
+            <li class="job__item job__item--factory" data-i18n="experience.factory.res.0">
+              Разработка технологического процесса изготовления оборудования
+            </li>
+            <li class="job__item job__item--factory" data-i18n="experience.factory.res.1">
+              Расчет норм времени на изготовление оборудования
+            </li>
+            <li class="job__item job__item--factory" data-i18n="experience.factory.res.2">
+              Расчет нормативов материальных затрат
+            </li>
+            <li class="job__item job__item--factory" data-i18n="experience.factory.res.3">
+              Разработка специальной оснастки
+            </li>
+            <li class="job__item job__item--factory" data-i18n="experience.factory.res.4">
+              Составление программ для станков с ЧПУ
+            </li>
           </ul>
         </li>
       </ul>
     </section>
 
     <section class="education main__section no-js" id="education" data-animation-state="hidden">
-      <h2 class="title main__title">Образование</h2>
+      <h2 class="title main__title" data-i18n="education.title">Образование</h2>
       <ul class="experience__list">
         <li class="experience__item job">
-          <h3 class="job__title">Черниговский национальный технологический университет</h3>
-          <span class="job__name">Технологии машиностроения, инженер-технолог, Чернигов</span>
-          <time class="job__date" datetime="2011-09-01">с 09.2011 по 06.2015 (3 года 9 месяцев)</time>
-          <p class="education__description">
+          <h3 class="job__title" data-i18n="education.university.name">Черниговский национальный технологический университет</h3>
+          <span class="job__name" data-i18n="education.university.position">Технологии машиностроения, инженер-технолог, Чернигов</span>
+          <time class="job__date" datetime="2011-09-01" data-i18n="education.university.datetime">
+            с 09.2011 по 06.2015 (3 года 9 месяцев)
+          </time>
+          <p class="education__description" data-i18n="education.university.description">
             Во время обучения работал наладчиком станков с числовым программным обеспечением.
             Затем лаборантом в Черниговском национальном технологическом университете на кафедре физики.
           </p>
         </li>
         <li class="experience__item job">
-          <h3 class="job__title">Черниговский радиомеханический техникум</h3>
-          <span class="job__name">Обработка материалов на станках и автоматических линиях, техник-технолог.</span>
-          <time class="job__date" datetime="2007-09-01">с 09.2007 по 06.2011 (3 года 9 месяцев)</time>
-          <p class="education__description">
+          <h3 class="job__title" data-i18n="education.technical.name">Черниговский радиомеханический техникум</h3>
+          <span class="job__name" data-i18n="education.technical.position">Обработка материалов на станках и автоматических линиях, техник-технолог.</span>
+          <time class="job__date" datetime="2007-09-01" data-i18n="education.technical.datetime">
+            с 09.2007 по 06.2011 (3 года 9 месяцев)
+          </time>
+          <p class="education__description" data-i18n="education.technical.description">
             Во время учебы проходил практику по специальности.
             Участвовал в олимпиадах по математике и информатике.
             Получил диплом с отличием.
@@ -202,44 +235,61 @@
         </li>
       </ul>
 
-      <h2 class="title main__title">Дополнительное образование</h2>
+      <h2 class="title main__title" data-i18n="education.additional.title">
+        Дополнительное образование
+      </h2>
       <ul class="experience__list experience__list--additional">
         <li class="experience__item job">
-          <h3 class="job__title">Основы Frontend разработки</h3>
-          <time class="job__date" datetime="2021-08-01">2021 (3 месяца)</time>
-          <p class="education__description">
+          <h3 class="job__title" data-i18n="education.additional.htmlAcademy.title">Основы Frontend разработки</h3>
+          <time class="job__date" datetime="2021-08-01" data-i18n="education.additional.htmlAcademy.datetime">
+            2021 (3 месяца)
+          </time>
+          <p class="education__description" data-i18n="education.additional.htmlAcademy.description">
             Онлайн обучение в академии веб-разработки - <b>HTML Academy</b> (HTML, CSS, sass, JS).
           </p>
         </li>
         <li class="experience__item job">
-          <h3 class="job__title">JS-разработчик</h3>
-          <p class="education__description">
-            <time class="job__date" datetime="2021-08-01">2021 (3 месяца)</time>
-            <br>
+          <h3 class="job__title" data-i18n="education.additional.hexletJS.title">JS-разработчик</h3>
+          <time class="job__date" datetime="2021-08-01" data-i18n="education.additional.hexletJS.datetime">
+            2021 (3 месяца)
+          </time>
+          <p class="education__description" data-i18n="education.additional.hexletJS.description">
             Онлайн обучение на <b>Hexlet.io</b>, за направлением JS-разработчик.
           </p>
         </li>
         <li class="experience__item job">
-          <h3 class="job__title">PHP-разработчик</h3>
-          <p class="education__description">
-            <time class="job__date" datetime="2019-05-01">2019 (6 месяцев)</time>
-            <br>
+          <h3 class="job__title" data-i18n="education.additional.reactJS.title">React / Redux</h3>
+          <time class="job__date" datetime="2021-11-20" data-i18n="education.additional.reactJS.datetime">
+            2021 (3 месяца)
+          </time>
+          <p class="education__description" data-i18n="education.additional.reactJS.description">
+            Онлайн курс React от <b>Intellias</b>.
+          </p>
+        </li>
+        <li class="experience__item job">
+          <h3 class="job__title" data-i18n="education.additional.hexletPHP.title">PHP-разработчик</h3>
+          <time class="job__date" datetime="2019-05-01" data-i18n="education.additional.hexletPHP.datetime">
+            2019 (6 месяцев)
+          </time>
+          <p class="education__description" data-i18n="education.additional.hexletPHP.description">
             Онлайн обучение на <b>Hexlet.io</b>, за направлением PHP-разработчик.
           </p>
         </li>
         <li class="experience__item job">
-          <h3 class="job__title">Основы программирования CS50</h3>
-          <p class="education__description">
-            <time class="job__date" datetime="2020-05-01">2020 (4 месяца)</time>
-            <br>
+          <h3 class="job__title" data-i18n="education.additional.cs50.title">Основы программирования CS50</h3>
+          <time class="job__date" datetime="2020-05-01" data-i18n="education.additional.cs50.datetime">
+            2020 (4 месяца)
+          </time>
+          <p class="education__description" data-i18n="education.additional.cs50.description">
             Онлайн курс - Основы программирования CS50.
           </p>
         </li>
         <li class="experience__item job">
-          <h3 class="job__title">Основы тестирования ПО</h3>
-          <p class="education__description">
-            <time class="job__date" datetime="2019-01-01">2019 (1 месяц)</time>
-            <br>
+          <h3 class="job__title" data-i18n="education.additional.qa.title">Основы тестирования ПО</h3>
+          <time class="job__date" datetime="2019-01-01" data-i18n="education.additional.qa.datetime">
+            2019 (1 месяц)
+          </time>
+          <p class="education__description" data-i18n="education.additional.qa.description">
             Онлайн обучение в учебно-консультативном центре <b>QA TestLab</b>.
           </p>
         </li>
@@ -247,11 +297,11 @@
     </section>
 
     <section class="works main__section no-js" id="works" data-animation-state="hidden">
-      <h2 class="title main__title">Мои работы</h2>
+      <h2 class="title main__title" data-i18n="works.title">Мои работы</h2>
       <ul class="works__list">
         <li class="works__item card works__item--double" tabindex="0">
           <header class="card__header">
-            <h4 class="card__title">Cyber Wallet</h4>
+            <h4 class="card__title" data-i18n="works.wallet.title">Cyber Wallet</h4>
           </header>
           <picture>
             <source type="image/webp" media="(min-width: 680px)"
@@ -262,14 +312,13 @@
               srcset="images/works/wallet/webp/mobile/wallet_m.webp 1x, images/works/wallet/webp/mobile/wallet_m@2x.webp 2x, images/works/wallet/webp/mobile/wallet_m@3x.webp 3x">
             <source
               srcset="images/works/wallet/jpg/mobile/wallet_m.jpg 1x, images/works/wallet/jpg/mobile/wallet_m@2x.jpg 2x, images/works/wallet/jpg/mobile/wallet_m@3x.jpg 3x">
-            <img class="card__img" alt="Скриншот сайта Wallet"
+            <img class="card__img" alt="Скриншот сайта Wallet" data-i18n-attr="works.wallet.alt"
               srcset="images/works/wallet/jpg/wallet@2x.jpg 2x, images/works/wallet/jpg/wallet@3x.jpg 3x"
               src="images/works/wallet/jpg/wallet.jpg">
           </picture>
           <footer class="card__footer">
-            <a class="card__link" href="https://github.com/jPee2k/wallet" target="_blank"
-              rel="nofollow noreferrer">Исходники</a>
-            <a class="card__link" href="https://wallet-intellias.vercel.app/" target="_blank" rel="nofollow noreferrer">Просмотр</a>
+            <a class="card__link" href="https://github.com/jPee2k/wallet" target="_blank" rel="nofollow noreferrer" data-i18n="works.links.git">Исходники</a>
+            <a class="card__link" href="https://wallet-intellias.vercel.app/" target="_blank" rel="nofollow noreferrer" data-i18n="works.links.prod">Просмотр</a>
             <ul class="card__tech">
               <li class="card__item">html</li>
               <li class="card__item">css</li>
@@ -280,19 +329,18 @@
         </li>
         <li class="works__item card" tabindex="0">
           <header class="card__header">
-            <h4 class="card__title">Redlab менеджмент</h4>
+            <h4 class="card__title" data-i18n="works.redlab.title">Redlab менеджмент</h4>
           </header>
           <picture>
             <source type="image/webp"
               srcset="images/works/redlab.webp 1x, images/works/redlab@2x.webp 2x, images/works/redlab@3x.webp 3x">
-            <img class="card__img" alt="Скриншот сайта - Redlab менеджмент"
+            <img class="card__img" alt="Скриншот сайта - Redlab менеджмент" data-i18n-attr="works.redlab.alt"
               srcset="images/works/redlab@2x.jpg 2x, images/works/redlab@3x.jpg 3x"
               src="images/works/redlab.jpg">
           </picture>
           <footer class="card__footer">
-            <a class="card__link" href="https://github.com/jPee2k/redlab-laravel-test" target="_blank"
-              rel="nofollow noreferrer">Исходники</a>
-            <a class="card__link" href="http://redlab-test.herokuapp.com/" target="_blank" rel="nofollow noreferrer">Просмотр</a>
+            <a class="card__link" href="https://github.com/jPee2k/redlab-laravel-test" target="_blank" rel="nofollow noreferrer" data-i18n="works.links.git">Исходники</a>
+            <a class="card__link" href="http://redlab-test.herokuapp.com/" target="_blank" rel="nofollow noreferrer" data-i18n="works.links.prod">Просмотр</a>
             <ul class="card__tech">
               <li class="card__item">html</li>
               <li class="card__item">css</li>
@@ -304,20 +352,18 @@
         </li>
         <li class="works__item card" tabindex="0">
           <header class="card__header">
-            <h4 class="card__title">Nerds - дизайн студия</h4>
+            <h4 class="card__title" data-i18n="works.nerds.title">Nerds - дизайн студия</h4>
           </header>
           <picture>
             <source type="image/webp"
               srcset="images/works/nerds.webp 1x, images/works/nerds@2x.webp 2x, images/works/nerds@3x.webp 3x">
-            <img class="card__img" alt="Скриншот сайта Nerds"
+            <img class="card__img" alt="Скриншот сайта Nerds" data-i18n-attr="works.nerds.alt"
               srcset="images/works/nerds@2x.jpg 2x, images/works/nerds@3x.jpg 3x"
               src="images/works/nerds.jpg">
           </picture>
-
           <footer class="card__footer">
-            <a class="card__link" href="https://github.com/jPee2k/nerds" target="_blank" rel="nofollow noreferrer">Исходники</a>
-            <a class="card__link" href="https://nerds-mu.vercel.app/" target="_blank"
-              rel="nofollow noreferrer">Просмотр</a>
+            <a class="card__link" href="https://github.com/jPee2k/nerds" target="_blank" rel="nofollow noreferrer" data-i18n="works.links.git">Исходники</a>
+            <a class="card__link" href="https://nerds-mu.vercel.app/" target="_blank" rel="nofollow noreferrer" data-i18n="works.links.prod">Просмотр</a>
             <ul class="card__tech">
               <li class="card__item">html</li>
               <li class="card__item">css</li>
@@ -327,7 +373,7 @@
         </li>
         <li class="works__item card  works__item--double" tabindex="0">
           <header class="card__header">
-            <h4 class="card__title">Yooosi</h4>
+            <h4 class="card__title" data-i18n="works.yooosi.title">Yooosi</h4>
           </header>
           <picture>
             <source type="image/webp" media="(min-width: 768px)"
@@ -338,14 +384,13 @@
               srcset="images/works/yoosi_01.jpg 1x, images/works/yoosi_01@2x.jpg 2x, images/works/yoosi_01@3x.jpg 3x">
             <source type="image/webp"
               srcset="images/works/yoosi.webp 1x, images/works/yoosi@2x.webp 2x, images/works/yoosi@3x.webp 3x">
-            <img class="card__img" alt="Скриншот сайта Yooosi"
+            <img class="card__img" alt="Скриншот сайта Yooosi" data-i18n-attr="works.yooosi.alt"
               srcset="images/works/yoosi@2x.jpg 2x, images/works/yoosi@3x.jpg 3x"
               src="images/works/yoosi.jpg">
           </picture>
           <footer class="card__footer">
-            <a class="card__link" href="https://github.com/jPee2k/test-task-for-sbitsoft" target="_blank"
-              rel="nofollow noreferrer">Исходники</a>
-            <!--              <a class="card__link" href="#" target="_blank" rel="nofollow noreferrer">Просмотр</a>-->
+            <a class="card__link" href="https://github.com/jPee2k/test-task-for-sbitsoft" target="_blank" rel="nofollow noreferrer" data-i18n="works.links.git">Исходники</a>
+            <!-- <a class="card__link" href="#" target="_blank" rel="nofollow noreferrer" data-i18n="works.links.prod">Просмотр</a> -->
             <ul class="card__tech">
               <li class="card__item">html</li>
               <li class="card__item">css</li>
@@ -355,20 +400,18 @@
         </li>
         <li class="works__item card" tabindex="0">
           <header class="card__header">
-            <h4 class="card__title">RSS агрегатор</h4>
+            <h4 class="card__title" data-i18n="works.rss.title">RSS агрегатор</h4>
           </header>
           <picture>
             <source type="image/webp"
               srcset="images/works/img_rss.webp 1x, images/works/img_rss@2x.webp 2x, images/works/img_rss@3x.webp 3x">
-            <img class="card__img" alt="Скриншот агрегатора RSS лент"
+            <img class="card__img" alt="Скриншот агрегатора RSS лент" data-i18n-attr="works.rss.alt"
               srcset="images/works/img_rss@2x.jpg 2x, images/works/img_rss@3x.jpg 3x"
               src="images/works/img_rss.jpg">
           </picture>
           <footer class="card__footer">
-            <a class="card__link" href="https://github.com/jPee2k/frontend-project-lvl3" target="_blank"
-              rel="nofollow noreferrer">Исходники</a>
-            <a class="card__link" href="https://frontend-project-lvl3-jpee2k.vercel.app/" target="_blank"
-              rel="nofollow noreferrer">Просмотр</a>
+            <a class="card__link" href="https://github.com/jPee2k/frontend-project-lvl3" target="_blank" rel="nofollow noreferrer" data-i18n="works.links.git">Исходники</a>
+            <a class="card__link" href="https://frontend-project-lvl3-jpee2k.vercel.app/" target="_blank" rel="nofollow noreferrer" data-i18n="works.links.prod">Просмотр</a>
             <ul class="card__tech">
               <li class="card__item">html</li>
               <li class="card__item">css</li>
@@ -379,19 +422,18 @@
         </li>
         <li class="works__item card" tabindex="0">
           <header class="card__header">
-            <h4 class="card__title">Gen diff - консольная утилита</h4>
+            <h4 class="card__title" data-i18n="works.diff.title">Gen diff - консольная утилита</h4>
           </header>
           <picture>
             <source type="image/webp"
               srcset="images/works/diff.webp 1x, images/works/diff@2x.webp 2x, images/works/diff@3x.webp 3x">
-            <img class="card__img" alt="Скриншот результата работы приложения"
+            <img class="card__img" alt="Скриншот результата работы приложения" data-i18n-attr="works.diff.alt"
               srcset="images/works/diff@2x.jpg 2x, images/works/diff@3x.jpg 3x"
               src="images/works/diff.jpg">
           </picture>
           <footer class="card__footer">
-            <a class="card__link" href="https://github.com/jPee2k/frontend-project-lvl2" target="_blank"
-              rel="nofollow noreferrer">Исходники</a>
-            <!--              <a class="card__link" href="#" target="_blank" rel="nofollow noreferrer">Просмотр</a>-->
+            <a class="card__link" href="https://github.com/jPee2k/frontend-project-lvl2" target="_blank" rel="nofollow noreferrer" data-i18n="works.links.git">Исходники</a>
+            <!-- <a class="card__link" href="#" target="_blank" rel="nofollow noreferrer" data-i18n="works.links.prod">Просмотр</a> -->
             <ul class="card__tech">
               <li class="card__item">node.js</li>
             </ul>
@@ -399,19 +441,18 @@
         </li>
         <li class="works__item card" tabindex="0">
           <header class="card__header">
-            <h4 class="card__title">Пятнашки</h4>
+            <h4 class="card__title" data-i18n="works.puzzle.title">Пятнашки</h4>
           </header>
           <picture>
             <source type="image/webp"
               srcset="images/works/15puzzle.webp 1x, images/works/15puzzle@2x.webp 2x, images/works/15puzzle@3x.webp 3x">
-            <img class="card__img" alt="Скриншот мини игры - Пятнашки"
+            <img class="card__img" alt="Скриншот мини игры - Пятнашки" data-i18n-attr="works.puzzle.alt"
               srcset="images/works/15puzzle@2x.jpg 2x, images/works/15puzzle@3x.jpg 3x"
               src="images/works/15puzzle.jpg">
           </picture>
           <footer class="card__footer">
-            <a class="card__link" href="https://github.com/jPee2k/gem-puzzle" target="_blank" rel="nofollow noreferrer">Исходники</a>
-            <a class="card__link" href="https://gem-puzzle-git-main-jpee2k.vercel.app/" target="_blank"
-              rel="nofollow noreferrer">Просмотр</a>
+            <a class="card__link" href="https://github.com/jPee2k/gem-puzzle" target="_blank" rel="nofollow noreferrer" data-i18n="works.links.git">Исходники</a>
+            <a class="card__link" href="https://gem-puzzle-git-main-jpee2k.vercel.app/" target="_blank" rel="nofollow noreferrer" data-i18n="works.links.prod">Просмотр</a>
             <ul class="card__tech">
               <li class="card__item">html</li>
               <li class="card__item">css</li>
@@ -421,18 +462,18 @@
         </li>
         <li class="works__item card" tabindex="0">
           <header class="card__header">
-            <h4 class="card__title">Lucky-day</h4>
+            <h4 class="card__title" data-i18n="works.roulette.title">Lucky-day</h4>
           </header>
           <picture>
             <source type="image/webp"
               srcset="images/works/lucky-day.webp 1x, images/works/lucky-day@2x.webp 2x, images/works/lucky-day@3x.webp 3x">
-            <img class="card__img" alt="Скриншот мини приложения, рулетка на удачу"
+            <img class="card__img" alt="Скриншот мини приложения, рулетка на удачу" data-i18n-attr="works.roulette.alt"
               srcset="images/works/lucky-day@2x.jpg 2x, images/works/lucky-day@3x.jpg 3x"
               src="images/works/lucky-day.jpg">
           </picture>
           <footer class="card__footer">
-            <a class="card__link" href="https://github.com/jPee2k/lucky-day" target="_blank" rel="nofollow noreferrer">Исходники</a>
-            <a class="card__link" href="https://lucky-day.vercel.app/" target="_blank" rel="nofollow noreferrer">Просмотр</a>
+            <a class="card__link" href="https://github.com/jPee2k/lucky-day" target="_blank" rel="nofollow noreferrer" data-i18n="works.links.git">Исходники</a>
+            <a class="card__link" href="https://lucky-day.vercel.app/" target="_blank" rel="nofollow noreferrer" data-i18n="works.links.prod">Просмотр</a>
             <ul class="card__tech">
               <li class="card__item">html</li>
               <li class="card__item">css</li>
@@ -444,12 +485,12 @@
     </section>
 
     <section class="about about--advance main__section no-js" data-animation-state="hidden">
-      <h2 class="title main__title">Дополнительно</h2>
+      <h2 class="title main__title" data-i18n="additional.title">Дополнительно</h2>
 
-      <p>Свой профессиональный путь я начинал с машиностроения, проще говоря - завод. Вдохновляясь желанием создавать
+      <p data-i18n="additional.description.0">Свой профессиональный путь я начинал с машиностроения, проще говоря - завод. Вдохновляясь желанием создавать
         что-то новое, интересное и полезное людям, выбрал профессию инженера. Но реалии таковы, что на промышленном
         производстве не интересно и очень мало возможностей для саморазвития и самореализации.</p>
-      <p>Компьютер у меня был с детства, поэтому могу сказать, что еще в школе уже был продвинутым пользователем, но
+      <p data-i18n="additional.description.1">Компьютер у меня был с детства, поэтому могу сказать, что еще в школе уже был продвинутым пользователем, но
         этого было не достаточно. Мне всегда было интересно, как говорится, "заглянуть под капот", но не просто
         заглянуть,
         а разобраться как оно работает. Попробовал программировать и понял, что для меня гораздо интереснее создавать
@@ -460,7 +501,7 @@
         узнаю что-нибудь новое. Хорошо, что теперь каждый может изучать солнечную систему или химические соединения, не
         выходя
         из дома. Онлайн курсы, которые я закончил, дали мне много фундаментальных знаний по программированию.</p>
-      <p>В свободное время я занимаюсь веб-разработкой, но и промышленные навыки продолжаю использовать – собираю
+      <p data-i18n="additional.description.2">В свободное время я занимаюсь веб-разработкой, но и промышленные навыки продолжаю использовать – собираю
         роботоподобные, автоматические конструкторы на базе Arduino с использованием 3Д печати. В свое время изготовил
         лазерный гравировальный станок в духе ЗD принтера. Всегда довожу начатую работу до конца. Все новые
         аспекты и нюансы с которыми раньше не приходилось работать - разбираю и овладеваю. усидчивость и четко

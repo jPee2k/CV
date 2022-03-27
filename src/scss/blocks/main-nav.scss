@@ -1,5 +1,5 @@
 .main-nav {
-  &--shown .main-nav__list {
+  &--shown .main-nav__wrapper {
     visibility: visible;
     height: auto;
   }
@@ -62,10 +62,12 @@
   @include scale-hover;
 }
 
-.main-nav__list {
+.main-nav__wrapper {
   visibility: hidden;
   height: 0;
+}
 
+.main-nav__list {
   @include reset-list;
   text-align: center;
 
@@ -134,7 +136,7 @@
   }
 }
 
-.no-js .main-nav__list {
+.no-js .main-nav__wrapper {
   visibility: visible;
   height: auto;
 }

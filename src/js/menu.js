@@ -1,7 +1,7 @@
 const body = document.querySelector('.page');
 const menuButton = body.querySelector('.main-nav__toggle');
 
-export const closeMenu = (button) => {
+const closeMenu = (button) => {
   button.setAttribute('aria-expanded', 'false');
   button.setAttribute('aria-label', 'открыть меню');
 
@@ -10,13 +10,20 @@ export const closeMenu = (button) => {
   body.classList.remove('page--lock');
 };
 
-export const openMenu = (button) => {
+const openMenu = (button) => {
   button.setAttribute('aria-expanded', 'true');
   button.setAttribute('aria-label', 'закрыть меню');
 
   const menu = button.parentElement;
   menu.classList.add('main-nav--shown');
   body.classList.add('page--lock');
+};
+
+const closeMenus = () => {
+  const buttons = document.querySelectorAll('button[aria-expanded="true"]');
+  buttons.forEach((button) => {
+    closeMenu(button);
+  });
 };
 
 const mainMenuButton = document.querySelector('.main-nav__toggle');
@@ -39,3 +46,5 @@ body.addEventListener('click', (evt) => {
     closeMenu(menuButton);
   }
 });
+
+export default closeMenus;

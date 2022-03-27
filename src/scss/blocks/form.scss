@@ -1,0 +1,28 @@
+.form {
+  position: absolute;
+  top: 18px;
+  right: 75px;
+}
+
+.form__select-lang {
+  padding: 5px;
+}
+
+@media screen and (min-width: 480px) {
+  .form {
+    visibility: visible;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .form {
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header .form {
+    padding-bottom: 20px;
+  }
+}
