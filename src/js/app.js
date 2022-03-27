@@ -8,7 +8,7 @@ import translations from './locale/index.js';
 const languages = ['en', 'ua', 'ru'];
 
 const app = async () => {
-  const defaultLanguage = 'ru';
+  const defaultLanguage = 'en';
 
   const i18n = i18next.createInstance();
   await i18n.init({

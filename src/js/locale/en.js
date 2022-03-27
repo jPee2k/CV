@@ -20,7 +20,7 @@ export default {
       title: 'About me',
       name: 'Serhii Pylypenko',
       position: 'Frontend developer',
-      description: ' I\'m a beginner in frontend developer with some commercial experience in backend development. I strive for clean, high-quality, modern and maximally deterministic code. I prefer quality over speed.',
+      description: 'I\'m a beginner in frontend development with some commercial experience in backend development. I strive for clean, high-quality, modern and maximally deterministic code. I prefer quality over speed.',
       avatar: {
         alt: 'author\'s photo',
       },
@@ -117,8 +117,8 @@ export default {
     works: {
       title: 'My works',
       links: {
-        git: 'source',
-        prod: 'inspect',
+        git: 'Source',
+        prod: 'Inspect',
       },
       wallet: {
         title: 'Cyber Wallet',
@@ -158,7 +158,7 @@ export default {
       description: [
         'I started my professional path with mechanical engineering on a factory. Inspired by the desire to create something new, be interesting and useful for people, I chose the profession of an engineer. But the reality is that industrial production is not interesting and there are no opportunities for self-education and self-realization.',
         'I have had a computer since my childhood, so I can say that even at school I was already an advanced user, but this was not enough. I have always been interested in, as they say, "look under the hood", but not just look, but figure out how it works. I tried to program and realized that it is much more interesting for me to create "digital products" rather than metal ones. The desire to master the latest technologies, deepen my knowledge and feel from my own experience how the modern Internet works pushed me to get a new profession. After all, it is now an integral part of our lives. I\'m self-taught in Web Development and learn something new every day. It\'s good that now everyone can study the solar system or chemical compounds without leaving home. The online courses that I have completed gave me a lot of fundamental programming knowledge.',
-        'In my free time, I do web development, but I also continue to use industrial skills - I assemble robotic, automatic kits based on Arduino using 3D printing. At one time, he made a laser engraving machine in the spirit of a 3D printer. I always finish what I start. All new aspects and nuances with which I have not had to work before - I disassemble and master. perseverance and a clear goal give good results.',
+        'In my free time, I do web development, but I also continue to use industrial skills - I assemble robotic, automatic kits based on Arduino using 3D printing. At one time, he made a laser engraving machine in the spirit of a 3D printer. I always finish what I start. All new aspects and nuances with which I have not had to work before - I disassemble and master. Perseverance and a clear goal give good results.',
       ],
     },
   },
